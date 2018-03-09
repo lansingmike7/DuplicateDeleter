@@ -3,6 +3,7 @@ import sys
 import os
 from PIL import Image
 dhash.force_pil()
+#This is the severity of comparision between Images
 COMPARE_PERCENTAGE = 23
 
 ImageFolder = sys.argv[1]
@@ -14,6 +15,7 @@ ListOfImages = []
 for subdir, dirs, files in os.walk(ImageFolder):
 	for file in files:
 			ListOfImages.append(os.path.join(subdir, file))
+#continue until all images have been checked and if no duplicates are found
 while NotDone:
 	image = Image.open(ListOfImages[i])
 	row, col = dhash.dhash_row_col(image)
