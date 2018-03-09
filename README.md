@@ -2,7 +2,7 @@
 Deletes Photos that are very similar and essentially duplicates, given a folder of images
 
 Provide a non empty folder This isnt stress tested chances are youll break it and find bugs and optimizations to be made
-wrote this in 30 for something im working on.
+wrote this in 30 minutes for something im working on.
 
 First Install Dependencies 
 
