@@ -71,5 +71,5 @@ while NotDone:
 	i+=1
 	if(i>=len(ListOfImages)):
 		i = 0
-Reset = True
+		Reset = True
 			
