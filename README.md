@@ -1,24 +1,43 @@
 # DuplicateDeleter
-Deletes Photos that are very similar and essentially duplicates, given a folder of images
 
-Provide a non empty folder This isnt stress tested chances are youll break it and find bugs and optimizations to be made
-wrote this in 30 minutes for something im working on.
+Deletes photos that are very similar and essentially duplicates inside of a folder. By default, all duplicates are moved into a duplicates folder in the script folder.
 
-First Install Dependencies 
+### Installation
 
+DuplicateDeleter requires Python 3 and a few packages.
+
+You can install the packages automatically with
+```python
+pip install -r requirements.txt
+```
+
+or manually with
+```python
 pip install pillow
 pip install dhash
+```
+
+### Options
+
+| Variable | Use |
+| ------ | ------ |
+| -i | Input Directory |
+| -t | Tolerance Level of Detection [Optional] (Default = 23)|
+
+ With tolerance, lower values will increase the amount of detections. A higher value will decrease the amount of detections.
 
 
-To Increase or decrease the strictness of Similarity 
-change the -t argument 
-0 is The same Image 100 is Completely different Default is 23
+### Example Use
 
-Run from teminal second command line argument is the path to in folder of images to compare 
-
-
-
-python3 DupFinder.py -i PATH_TO_IMAGE_FOLDER -t INT_TOLORANCE
--t is optional default is 23
-
- eg python3 DupFinder.py -i /home/jimbob/Pictures/face_recognition/je -t 13
+To run the script in the currently selected folder
+```python
+python DupFinder.py
+```
+If you would like to specify a different directory
+```python
+python DupFinder.py -i INPUT_FOLDER -t 13
+```
+Here is an example of the script
+```python
+python DupFinder.py -i /home/jimbob/Pictures/face_recognition/je -t 13
+```
